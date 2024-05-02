@@ -18,28 +18,28 @@ const Vdoc = () => {
   const myPrompt = (text) => {
     // const url = process.env.EXPO_OPENAI_URL;
     const url = "HERE OPENAI URL";
-    const config = {
-      headers: {
-        // Authorization: `Bearer ${process.env.EXPO_OPENAI_TOKEN}`,
-        Authorization: "HERE OPENAI BEARER TOKEN",
-      },
-    };
-    const data = {
-      model: "gpt-3.5-turbo",
-      messages: [
-        {
-          role: "system",
-          content:
-            "You are a medical assistant and you have answer patients medical queries if patient gives you symptoms you have to predict disease and give anser in this manner [Symptoms- users symptoms, Disease- user disease, seriousness- ask how serious condition is if user have severe condition just suggest them a doctor according to there disease and if user is not severe then give them medication- mediaction according to user disease ] and also suggest necessary diet- user diet and precatutions.",
-        },
-        {
-          role: "user",
-          content: `${text}`,
-        },
-      ],
-      temperature: 0.7,
-      stream: false,
-    };
+    // const config = {
+    //   headers: {
+    //     // Authorization: `Bearer ${process.env.EXPO_OPENAI_TOKEN}`,
+    //     Authorization: "HERE OPENAI BEARER TOKEN",
+    //   },
+    // };
+    // const data = {
+    //   model: "gpt-3.5-turbo",
+    //   messages: [
+    //     {
+    //       role: "system",
+    //       content:
+    //         "You are a medical assistant and you have answer patients medical queries if patient gives you symptoms you have to predict disease and give anser in this manner [Symptoms- users symptoms, Disease- user disease, seriousness- ask how serious condition is if user have severe condition just suggest them a doctor according to there disease and if user is not severe then give them medication- mediaction according to user disease ] and also suggest necessary diet- user diet and precatutions.",
+    //     },
+    //     {
+    //       role: "user",
+    //       content: `${text}`,
+    //     },
+    //   ],
+    //   temperature: 0.7,
+    //   stream: false,
+    // };
     setLoading(true);
     axios
       .post(url, data, config)
