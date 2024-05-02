@@ -16,10 +16,10 @@ const Vdoc = () => {
   }, []);
 
   const myPrompt = (text) => {
-    const url = process.env.OpenAI_KEY
+    const url = process.env.EXPO_OPENAI_URL;
     const config = {
       headers: {
-        Authorization: `Bearer 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`,
+        Authorization: `Bearer ${process.env.EXPO_OPENAI_TOKEN}`,
       },
     };
     const data = {
