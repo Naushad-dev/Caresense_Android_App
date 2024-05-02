@@ -16,10 +16,12 @@ const Vdoc = () => {
   }, []);
 
   const myPrompt = (text) => {
-    const url = process.env.EXPO_OPENAI_URL;
+    // const url = process.env.EXPO_OPENAI_URL;
+    const url = "HERE OPENAI URL";
     const config = {
       headers: {
-        Authorization: `Bearer ${process.env.EXPO_OPENAI_TOKEN}`,
+        // Authorization: `Bearer ${process.env.EXPO_OPENAI_TOKEN}`,
+        Authorization: "HERE OPENAI BEARER TOKEN",
       },
     };
     const data = {
