@@ -16,7 +16,7 @@ const Vdoc = () => {
   }, []);
 
   const myPrompt = (text) => {
-    const url = "https://api.openai.com/v1/chat/completions";
+    const url = process.env.OpenAI_KEY
     const config = {
       headers: {
         Authorization: `Bearer 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`,
